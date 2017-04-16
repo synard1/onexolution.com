@@ -1,13 +1,5 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "9013l1nx";
-$databasename = "devel";
-
-$connection =mysql_connect($host,$username,$password) or Die ("failed");
-mysql_select_db($databasename,$connection) or die ("wrong db");
-
-
+/* This script will upload image with random file name to server, if you don't want to use random name, see index2.php */
 
  //This function separates the extension from the rest of the file name and returns it 
  function findexts ($filename) 
@@ -34,9 +26,9 @@ mysql_select_db($databasename,$connection) or die ("wrong db");
 //This combines the directory, the random file name and the extension $target = $target . $ran2.$ext;
 $target = $target . $ran2.$ext;
 $name = $ran2.$ext;
+
  if(move_uploaded_file($_FILES['uploaded']['tmp_name'], $target)) 
  {
-	mysql_query("INSERT INTO images(id,name) VALUES('','$name')");
 
  echo "The file has been uploaded as ".$name;
  } 
