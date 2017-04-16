@@ -1,5 +1,5 @@
 <?php
-/* This script will upload image with random file name to server, if you don't want to use random name, see index2.php */
+/* This script will upload image with random file name to server, if you don't want to use random name, see upload2.php */
 
  //This function separates the extension from the rest of the file name and returns it 
  function findexts ($filename) 
